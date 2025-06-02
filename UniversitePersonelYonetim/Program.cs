@@ -59,17 +59,17 @@ namespace UniversitePersonelYonetim
 
         static void VarsayilanPersonelleriEkle()
         {
-            personeller.Add(new Professor { Ad = "Ahmet", Soyad = "Kaya", DersSaati = 10 });
-            personeller.Add(new Docent { Ad = "Mehmet", Soyad = "Demir", DersSaati = 8 });
-            personeller.Add(new Docent { Ad = "Elif", Soyad = "Yılmaz", DersSaati = 7 });
-            personeller.Add(new DrOgrUyesi { Ad = "Can", Soyad = "Aslan", DersSaati = 6 });
-            personeller.Add(new DrOgrUyesi { Ad = "Seda", Soyad = "Çelik", DersSaati = 5 });
-            personeller.Add(new DrOgrUyesi { Ad = "Kerem", Soyad = "Aydın", DersSaati = 4 });
-            personeller.Add(new ArasGor { Ad = "Zeynep", Soyad = "Koç" });
-            personeller.Add(new ArasGor { Ad = "Burak", Soyad = "Yıldız" });
-            personeller.Add(new Memur { Ad = "Ayşe", Soyad = "Kurt" });
-            personeller.Add(new Memur { Ad = "Eren", Soyad = "Güneş" });
-            personeller.Add(new TeknikPersonel { Ad = "Selin", Soyad = "Aksoy" });
+            personeller.Add(new Professor { Ad = "Efendi", Soyad = "NASİBOĞLU", DersSaati = 10 });
+            personeller.Add(new Docent { Ad = "Muhammet", Soyad = "DAMAR", DersSaati = 8 });
+            personeller.Add(new Docent { Ad = "Fidan", Soyad = "NURİYEVA", DersSaati = 7 });
+            personeller.Add(new DrOgrUyesi { Ad = "Barış Tekin", Soyad = "TEZEL", DersSaati = 6 });
+            personeller.Add(new DrOgrUyesi { Ad = "Kadriye Filiz", Soyad = "BALBAL", DersSaati = 5 });
+            personeller.Add(new DrOgrUyesi { Ad = "Erdem", Soyad = "Alkım", DersSaati = 4 });
+            personeller.Add(new ArasGor { Ad = "Süheyla", Soyad = "UYGUR" });
+            personeller.Add(new ArasGor { Ad = "Onur Mert", Soyad = "ÇELDİR" });
+            personeller.Add(new Memur { Ad = "Samed", Soyad = "TUÇAY" });
+            personeller.Add(new Memur { Ad = "Osman", Soyad = "YAVUZ" });
+            personeller.Add(new TeknikPersonel { Ad = "Mehmet", Soyad = "PAKSOY" });
         }
 
         static void TumCalisanlariListele()
@@ -116,7 +116,7 @@ namespace UniversitePersonelYonetim
 
                 if (ay == 6)
                 {
-                    Console.WriteLine("✔ Haziran zammı bu ay uygulandı.");
+                    Console.WriteLine("Haziran zammı bu ay uygulandı.");
                     ZamUygula();
                 }
 
