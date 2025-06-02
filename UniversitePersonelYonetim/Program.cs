@@ -14,13 +14,11 @@ namespace UniversitePersonelYonetim
 
         static void Main(string[] args)
         {
-            CultureInfo.CurrentCulture = new CultureInfo("tr-TR");
-
-            // Başlangıçta varsayılan personeller ekleniyor
             VarsayilanPersonelleriEkle();
 
             while (true)
             {
+                Console.Clear();
                 Console.WriteLine("\n===== MENÜ =====");
                 Console.WriteLine("1 - Tüm çalışanları listele");
                 Console.WriteLine("2 - Yeni çalışan ekle");
@@ -54,6 +52,10 @@ namespace UniversitePersonelYonetim
                         Console.WriteLine("Geçersiz seçim.");
                         break;
                 }
+
+                Console.WriteLine("\nAna menüye dönmek için ENTER'a bas...");
+                Console.ReadLine();
+
             }
         }
 
@@ -74,7 +76,6 @@ namespace UniversitePersonelYonetim
 
         static void TumCalisanlariListele()
         {
-            Console.Clear();
             Console.WriteLine("\n--- Çalışan Listesi ---");
             foreach (var p in personeller)
             {
@@ -84,7 +85,6 @@ namespace UniversitePersonelYonetim
 
         static void MaaslariGoster()
         {
-            Console.Clear();
             Console.WriteLine("\n--- Maaşlar ---");
             foreach (var p in personeller)
             {
@@ -107,7 +107,9 @@ namespace UniversitePersonelYonetim
 
         static void SimulasyonuCalistir()
         {
-            Console.Clear();
+            Console.WriteLine("\n\nYeni 12 Aylık Simülasyon Başlatılıyor...");
+            Console.WriteLine("=========================================");
+
             decimal toplamYillikGider = 0;
 
             for (int ay = 1; ay <= 12; ay++)
@@ -130,17 +132,18 @@ namespace UniversitePersonelYonetim
                 }
 
                 Console.WriteLine($"Toplam Personel Gideri ({ay}. Ay): {aylikToplam:N0} TL");
+
+                toplamYillikGider += aylikToplam;
             }
 
-            Console.WriteLine($"\n12 Ay Sonundaki Toplam Gider: {toplamYillikGider:N0} TL");
-            Console.WriteLine("\nAna menüye dönmek için ENTER'a bas.");
-            Console.ReadLine();
-        }
+            Console.WriteLine($"\nYıllık Toplam Gider: {toplamYillikGider:N0} TL");
+            Console.WriteLine("=========================================\n");
 
+           
+        }
 
         static void YeniCalisanEkle()
         {
-            Console.Clear();
             Console.WriteLine("\nYeni personel ekleniyor...");
             Console.WriteLine("Tür seçin: 1-Professor, 2-Docent, 3-DrOgrUyesi, 4-ArasGor, 5-Memur, 6-TeknikPersonel");
             string tur = Console.ReadLine();
@@ -182,7 +185,6 @@ namespace UniversitePersonelYonetim
                     break;
             }
 
-
             if (yeni != null)
             {
                 personeller.Add(yeni);
@@ -195,4 +197,3 @@ namespace UniversitePersonelYonetim
         }
     }
 }
-
